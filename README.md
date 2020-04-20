@@ -1,4 +1,6 @@
 # Relationship between weather and influenza incidents
+[Project Link](https://github.com/hudcondr/data-stewardship-ex1)
+
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
@@ -129,6 +131,5 @@ git push origin feature/AmazingFeature
 ## Contact
 
 Ondrej Hudcovic - Regarding any questions, please contact me at ondrej.hudcovic@gmail.com
-[ORCID](https://orcid.org/0000-0001-5208-7222)
 
-[Project Link](https://github.com/hudcondr/data-stewardship-ex1)
+[ORCID](https://orcid.org/0000-0001-5208-7222)
