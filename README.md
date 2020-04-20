@@ -126,3 +126,10 @@ git commit -m 'Add some AmazingFeature'
 git push origin feature/AmazingFeature
 ```
 5. Open a Pull Request
+
+<!-- CONTACT -->
+## Contact
+
+Ondrej Hudcovic - Regarding any questions, please contact me at ondrej.hudcovic@gmail.com
+
+[Project Link](https://github.com/hudcondr/data-stewardship-ex1)
