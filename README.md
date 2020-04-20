@@ -13,7 +13,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-The goal of this experiment was to model the relationship between weather observations and the prevalence of new influenza infections. Finally, it tried to predict influenza infections based on weather conditions. For the purposes of this project, 2 datasets were used - [influenza dataset](https://www.data.gv.at/katalog/dataset/grippemeldedienst-stadt-wien) and [Vienna weather observations dataset](https://www.meteoblue.com/en/weather/archive/export/vienna_austria_2761369).
+The goal of this experiment was to model the relationship between weather observations and the prevalence of new influenza infections. It included reading, preparing and transforming data. Subsequently, these data were visualized and used for building a prediction model - we tried to predict influenza infections based on weather conditions.
 
 ### Built With
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
