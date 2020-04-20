@@ -32,14 +32,14 @@ JupyterLab can be installed using `conda` or `pip`. For more detailed instructio
 ##### conda
 If you use conda, you can install it with:
 
-'''
+```console
 conda install -c conda-forge jupyterlab
-'''
+```
 ##### pip
 If you use pip, you can install it with:
 
-'''
+```console
 pip install jupyterlab
-'''
+```
 
 If installing using `pip install --user`, you must add the user-level `bin` directory to your `PATH` environment variable in order to launch `jupyter lab`.
