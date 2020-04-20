@@ -1,6 +1,7 @@
 # Relationship between weather and influenza incidents
 [Project Link](https://github.com/hudcondr/data-stewardship-ex1)
-https://zenodo.org/badge/257225017.svg
+
+[Zenodo badge](https://zenodo.org/badge/257225017.svg)
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
