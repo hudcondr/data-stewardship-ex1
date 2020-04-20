@@ -75,6 +75,10 @@ See [Running the Notebook](https://jupyter.readthedocs.io/en/latest/running.html
 
 ## Usage
 
+### Code snippet
+
+This is a python snippet of SVR prediction:
+
 ```python
 target_column = ['weekly_infections']
 predictors = list(set(list(data_merged.columns))-set(target_column))
@@ -102,9 +106,6 @@ print("Train:\n", pred_train_svr)
 print("\nTest:\n", pred_test_svr)
 print("\nFinal prediction:\n", pred_final_data_svr)
 ```
-
-
-
 
 
 <!-- CONTRIBUTING -->
