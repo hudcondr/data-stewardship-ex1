@@ -1,0 +1,355 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage[margin=1.4cm]{geometry}
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Data Management Plan},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Data Management Plan}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hypertarget{fair-data-science}{%
+\section{FAIR Data Science}\label{fair-data-science}}
+
+\begin{description}
+\item[Contact person]
+\begin{itemize}
+\tightlist
+\item
+  {Ondrej Hudcovic}
+  ({\href{mailto:e11919907@student.tuwien.ac.at}{\nolinkurl{e11919907@student.tuwien.ac.at}}})
+\end{itemize}
+\item[Based on]
+Common DSW Knowledge Model, 2.0.1 ({{dsw}:{root}:{2.0.1}})
+\item[Generated on]
+20 Apr 2020
+\end{description}
+
+Data Management Plan created in Data Stewardship Wizard
+\textless{}\url{https://ds-wizard.org}\textgreater{}
+
+\hypertarget{abstract}{%
+\subsection{Abstract}\label{abstract}}
+
+The goal of this experiment was to model the relationship between
+weather observations and the prevalence of new influenza infections. It
+included reading, preparing and transforming data. Subsequently, these
+data were visualized and used for building a prediction model - we tried
+to predict influenza infections based on weather conditions.
+
+\hypertarget{dmp-content}{}
+\hypertarget{sec-data-collection}{}
+\hypertarget{section-a-data-collection}{%
+\subsection{Section A: Data
+Collection}\label{section-a-data-collection}}
+
+\hypertarget{q-what-data}{}
+\hypertarget{what-data-will-you-collect-or-create}{%
+\subsubsection{1. What data will you collect or
+create?}\label{what-data-will-you-collect-or-create}}
+
+\hypertarget{instrument-datasets}{%
+\paragraph{Instrument datasets}\label{instrument-datasets}}
+
+The following instrument datasets will be acquired in the project:
+
+\begin{itemize}
+\item
+  \textbf{influenza.csv, weather observations}
+
+  This dataset will be collected by experts in the project, with our own
+  equipment.
+
+  The equipment is very well described and known.
+\end{itemize}
+
+\hypertarget{data-formats-and-types}{%
+\paragraph{Data formats and types}\label{data-formats-and-types}}
+
+We will be using the following data formats and types:
+
+\begin{itemize}
+\item
+  \textbf{\href{https://fairsharing.org/bsg-s001303}{CSV Dialect
+  Description Format}}
+
+  It is a standardized format. This is a suitable format for long-term
+  archiving. We will have only a small amount of data stored in this
+  format.
+\end{itemize}
+
+\hypertarget{q-how-data}{}
+\hypertarget{how-will-the-data-be-collected-or-created}{%
+\subsubsection{2. How will the data be collected or
+created?}\label{how-will-the-data-be-collected-or-created}}
+
+\hypertarget{instrument-datasets-1}{%
+\paragraph{Instrument datasets}\label{instrument-datasets-1}}
+
+\begin{itemize}
+\item
+  \textbf{\href{https://www.data.gv.at/katalog/dataset/grippemeldedienst-stadt-wien}{influenza.csv}, \href{https://www.meteoblue.com/en/weather/archive/export/vienna_austria_2761369}{weather observations}}
+
+  No instruments for this dataset have been specified.
+
+  We will not be using quality process for this dataset.
+\end{itemize}
+
+\hypertarget{storage-and-file-conventions}{%
+\paragraph{Storage and file
+conventions}\label{storage-and-file-conventions}}
+
+We will use a filesystem with files and folders with the following
+folder conventions:
+
+\begin{itemize}
+\tightlist
+\item
+  There will be a \textbf{folder for each sample/subject}. Each of those
+  will use the following conventions:
+  \begin{itemize}
+      \item \textbf{data} - these are the datasets used in the experiment
+      \item \textbf{images} - generated images from "visualization" part of the project
+      \item \textbf{src} - source code
+  \end{itemize} 
+\end{itemize}
+Every "type" of data (be it source code, datasets, ...) has its own designated folder in the repository.
+
+Moreover, we have made appointments about naming the files.
+
+We will not be storing data in an "object store" system.
+
+We will not use a relational database system to store project data.
+
+We will not use a graph database for data in the project.
+
+We will not be storing data in a triple store.
+
+\hypertarget{sec-docs-metadata}{}
+\hypertarget{section-b-documentation-and-meta-data}{%
+\subsection{Section B: Documentation and
+Meta-data}\label{section-b-documentation-and-meta-data}}
+
+\hypertarget{q-docs-metadata}{}
+\hypertarget{what-documentation-and-meta-data-will-accompany-the-data}{%
+\subsubsection{3. What documentation and meta-data will accompany the
+data?}\label{what-documentation-and-meta-data-will-accompany-the-data}}
+
+List of data to be published is given in Section E, Question 9. This
+also includes information about catalogs where the data can be found.
+Information about data types used is given in Section A, Question 1.
+
+We will use an electronic lab notebook to make sure that there is good
+provenance of the data analysis.
+
+We will be documenting the data with W3C PROV provenance.
+
+\hypertarget{sec-ethics-legal}{}
+\hypertarget{section-c-ethics-and-legal-compliance}{%
+\subsection{Section C: Ethics and Legal
+Compliance}\label{section-c-ethics-and-legal-compliance}}
+
+\hypertarget{q-ethical-issues}{}
+\hypertarget{how-will-you-manage-any-ethical-issues}{%
+\subsubsection{4. How will you manage any ethical
+issues?}\label{how-will-you-manage-any-ethical-issues}}
+
+\hypertarget{q-ethical-issues}{}
+\hypertarget{how-will-you-manage-copyright-and-intellectual-property-rights-ipr-issues}{%
+\subsubsection{5. How will you manage copyright and Intellectual
+Property Rights (IPR)
+issues?}\label{how-will-you-manage-copyright-and-intellectual-property-rights-ipr-issues}}
+
+We will be working with the philosophy \emph{as open as possible} for
+our data.
+
+All of our data can become completely open immediately.
+
+\hypertarget{sec-storage-backup}{}
+\hypertarget{section-d-storage-and-backup}{%
+\subsection{Section D: Storage and
+Backup}\label{section-d-storage-and-backup}}
+
+\hypertarget{q-store-backup}{}
+\hypertarget{how-will-the-data-be-stored-and-backed-up-during-the-research}{%
+\subsubsection{6. How will the data be stored and backed up during the
+research?}\label{how-will-the-data-be-stored-and-backed-up-during-the-research}}
+
+Storage needs will be the same during the whole project.
+
+All essential data is also stored elsewhere to prevent a total loss of
+data. All project data stored outside of the working area will be
+adequately backed up.
+
+\hypertarget{q-access-security}{}
+\hypertarget{how-will-you-manage-access-and-security}{%
+\subsubsection{7. How will you manage access and
+security?}\label{how-will-you-manage-access-and-security}}
+
+Project members will not store data or software on computers in the lab
+or external hard drives connected to those computers.They will not carry
+data with them (e.g. on laptops, USB sticks, or other external media).
+All data centers where project data is stored carry sufficient
+certifications. All project web services addressed via secure http
+(https://...). Project members have been instructed about both generic
+and specific risks to the project.
+
+The possible impact to the project or organization if information is
+lost is small. The possible impact to the project or organization if
+information is leaked is small. The possible impact to the project or
+organization if information is vandalised is small.
+
+We are not using any personal information.
+
+Only project members will have read access; only selected project
+members will be able to write data.
+
+\hypertarget{sec-selection-preservation}{}
+\hypertarget{section-e-selection-and-preservation}{%
+\subsection{Section E: Selection and
+Preservation}\label{section-e-selection-and-preservation}}
+
+\hypertarget{q-which-longterm}{}
+\hypertarget{which-data-are-of-long-term-value-and-should-be-retained-shared-andor-preserved}{%
+\subsubsection{8. Which data are of long-term value and should be
+retained, shared, and/or
+preserved?}\label{which-data-are-of-long-term-value-and-should-be-retained-shared-andor-preserved}}
+
+We plan to publish the following datasets:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\href{https://www.data.gv.at/katalog/dataset/grippemeldedienst-stadt-wien}{influenza.csv}, \href{https://www.meteoblue.com/en/weather/archive/export/vienna_austria_2761369}{weather observations}} {--} This data set will
+  be kept available as long as technically possible. {--} The metadata
+  will be available even when the data no longer exists.
+\end{itemize}
+
+\hypertarget{q-longterm-plan}{}
+\hypertarget{what-is-the-longterm-preservation-plan-for-the-dataset}{%
+\subsubsection{9. What is the longterm preservation plan for the
+dataset?}\label{what-is-the-longterm-preservation-plan-for-the-dataset}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\href{https://www.data.gv.at/katalog/dataset/grippemeldedienst-stadt-wien}{influenza.csv}, \href{https://www.meteoblue.com/en/weather/archive/export/vienna_austria_2761369}{weather observations}} will be stored in a
+  domain-specific repository:
+  \href{https://fairsharing.org/bsg-d001160}{GitHub}. \href{https://github.com/hudcondr/data-stewardship-ex1}{This is the link to the repository of the project}. We don't need to
+  contact the repository because it is a routine for us. We will be
+  adding a reference to the published data to at least one data
+  catalogue.
+\end{itemize}
+
+None of the used repositories charge for their services.
+
+We have a reserved budget for the time and effort it will take to
+prepare the data for publication.
+
+\hypertarget{sec-data-sharing}{}
+\hypertarget{section-f-data-sharing}{%
+\subsection{Section F: Data Sharing}\label{section-f-data-sharing}}
+
+\hypertarget{q-how-share}{}
+\hypertarget{how-will-you-share-the-data}{%
+\subsubsection{10. How will you share the
+data?}\label{how-will-you-share-the-data}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\href{https://www.data.gv.at/katalog/dataset/grippemeldedienst-stadt-wien}{influenza.csv}, \href{https://www.meteoblue.com/en/weather/archive/export/vienna_austria_2761369}{weather observations}} {--} freely available for
+  any use (public domain or CC0).
+\end{itemize}
+
+Information about used repositories (i.e. where will potential users
+find out about the data) is provided in Section E, Question 9.
+
+Embargo on the data is described in Section C, Question 5, and Section
+F, Question 11.
+
+\hypertarget{q-restrictions}{}
+\hypertarget{are-any-restrictions-on-data-sharing-required}{%
+\subsubsection{11. Are any restrictions on data sharing
+required?}\label{are-any-restrictions-on-data-sharing-required}}
+
+Ethical and legal restrictions are documented under Section C. We have
+used the Data Stewardship Wizard, which made us aware of options to
+minimize the restrictions.
+
+No data sharing agreement will be required.
+
+\hypertarget{sec-responsibilities-resources}{}
+\hypertarget{section-g-responsibilities-and-resources}{%
+\subsection{Section G: Responsibilities and
+Resources}\label{section-g-responsibilities-and-resources}}
+
+\hypertarget{q-dm-responsible}{}
+\hypertarget{who-will-be-responsible-for-data-management}{%
+\subsubsection{12. Who will be responsible for data
+management?}\label{who-will-be-responsible-for-data-management}}
+
+Ondrej Hudcovic is responsible for implementing the DMP, and ensuring it
+is reviewed and revised.
+
+\hypertarget{q-required-resources}{}
+\hypertarget{what-resources-will-you-require-to-deliver-your-plan}{%
+\subsubsection{13. What resources will you require to deliver your
+plan?}\label{what-resources-will-you-require-to-deliver-your-plan}}
+
+To execute the DMP, no additional specialist expertise is required.
+
+We do not require any hardware or software in addition to what is
+usually available in the institute.
+
+Charges applied by data repositories (if any) are mentioned already in
+Section E, Question 9.
+
+\end{document}
+
