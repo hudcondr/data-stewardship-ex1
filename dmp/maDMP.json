@@ -1,0 +1,63 @@
+{
+	"dmp": {
+        "dmp_id": {
+            "identifier": "https://doi.org/10.5281/zenodo.3757895",
+            "type": "doi"
+        },
+        "title": "Predicting influenza occurrences based on weather",
+        "description": "The goal of this experiment was to model the relationship between weather observations and the prevalence of new influenza infections. It included reading, preparing and transforming data. Subsequently, these data were visualized and used for building a prediction model - we tried to predict influenza infections based on weather conditions.",
+        "language": "eng",
+        "created": "2020-04-20T14:00:00.000Z",
+        "contact": {
+            "contact_id": {
+                "identifier": "https://orcid.org/0000-0002-4844-6306",
+                "type": "orcid"
+            },
+            "mbox": "e11919907@student.tuwien.ac.at",
+            "name": "Ondrej Hudcovic"
+        },
+        "cost": [],
+        "dataset": [
+            {
+                "dataset_id": {
+                    "identifier": "https://www.data.gv.at/katalog/dataset/grippemeldedienst-stadt-wien/resource/fa5edf7a-4236-45d4-a81e-c803eb4450fc",
+                    "type": "url"
+                },
+                "title": "Katalog Grippemeldedienst der Stadt Wien",
+                "description": "Occurencies of influenza infections in the city of Vienna	",
+                "issued": "2018-09-18",
+                "language": "eng",
+                "personal_data": "no",
+                "sensitive_data": "no",
+                "type": "software",
+                "keyword": ["influenza", "python", "dmp", "jupyter notebook"],
+                "distribution": [
+                    {
+                        "title": "influenza",
+                        "data_access": "open",
+                        "license": [
+                            {
+                                "license_ref": "https://creativecommons.org/publicdomain/zero/1.0/",
+                                "start_date": "2020-04-18"
+                            }
+                        ],
+                        "host": {
+                            "title": "GitHub",
+                            "url": "https://github.com/hudcondr/data-stewardship-ex1",
+                            "support_versioning": "yes"
+                        }
+                    }
+                ]
+            }
+        ],
+        "project": [
+            {
+                "start": "2020-04-18",
+                "end": "2020-04-20",
+                "title": "Predicting influenza occurrences based on weather"
+            }
+        ],
+        "ethical_issues_exist": "no",
+        "modified": "2020-04-20T14:16:00.000Z"
+    }
+}
